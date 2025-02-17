@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Netlify]((https://willowy-choux-3e28ab.netlify.app/))
+- Live Site URL: [Netlify](https://willowy-choux-3e28ab.netlify.app/)
 
 ## My process
 
