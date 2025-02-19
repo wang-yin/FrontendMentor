@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Netlify](https://willowy-choux-3e28ab.netlify.app/)
+- Live Site URL: [Netlify](https://yinblog-preview-card-main.netlify.app/)
 
 ## My process
 
