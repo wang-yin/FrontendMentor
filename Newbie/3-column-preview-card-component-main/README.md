@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://yin3-column-preview-card-component.netlify.app/)
 
 ## My process
 
