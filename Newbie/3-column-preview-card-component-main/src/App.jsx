@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Card from "./components/Card";
+
+
+const carData = [
+  {
+    type: "Sedans",
+    description:
+      "Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.",
+    icon: '/images/icon-sedans.svg',
+    color: "--Orange"
+  },
+  {
+    type: "SUVs",
+    description:
+      "Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.",
+    icon: '/images/icon-suvs.svg',
+    color: "--DarkCyan"
+  },
+  {
+    type: "Luxury",
+    description:
+      "Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.",
+    icon: '/images/icon-luxury.svg',
+    color: "--VeryDarkCyan"
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {carData.map((car, index) => (
+        <Card key={index} type={car.type} description={car.description} icon={car.icon} color={car.color}/>
+      ))}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
