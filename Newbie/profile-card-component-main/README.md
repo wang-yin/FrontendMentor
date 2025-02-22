@@ -10,13 +10,14 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
 
 ### The challenge
 
-- Build out the project to the designs provided
+- Translate a static HTML structure into a dynamic React component. I abstract the data and use props to dynamically render the content.
 
 ### Screenshot
 
@@ -40,6 +41,12 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 - Git - Version control system.
 - GitHub - For code hosting and version control.
 - Netlify - For project deployment and static site hosting.
+
+### Continued development
+
+- In the future, the profiles data can be fetched from an API to make the project more aligned with real-world application scenarios.
+
+- A styling library (such as Tailwind CSS or Styled Components) can be incorporated to enhance the UI.
 
 ## Author
 

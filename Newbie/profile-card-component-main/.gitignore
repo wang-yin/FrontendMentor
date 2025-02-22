@@ -16,6 +16,7 @@ dist-ssr
 *.fig
 *.xd
 .prettierignore
+.toml
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
