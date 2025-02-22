@@ -1,0 +1,34 @@
+.bg-pattern-card {
+  max-width: 100%;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-content > img {
+  border-radius: 50%;
+  border: 6px solid white;
+  margin: -60px;
+  margin-bottom: 20px;
+}
+
+.profile-content > h3 {
+  color: var(--DesaturatedBlue);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.profile-content > h3 span {
+  color: var(--GrayishBlue);
+  font-weight: 400;
+}
+
+.profile-content > p {
+  color: var(--GrayishBlue);
+  font-weight: 400;
+  font-size: 16px;
+}
