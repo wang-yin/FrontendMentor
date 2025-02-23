@@ -1,0 +1,37 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Design */
+:root {
+  --White: hsl(0, 0%, 100%);
+  --LightPink: hsl(275, 100%, 97%);
+  --GrayishPurple: hsl(292, 16%, 49%);
+  --DarkPurple: hsl(292, 42%, 14%);
+}
+
+body {
+  background-color: var(--LightPink);
+  font-family: "Work Sans", serif;
+  background-image: url(/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url(/images/background-pattern-desktop.svg);
+  }
+
+}

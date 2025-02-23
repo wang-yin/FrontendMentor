@@ -1,1 +1,11 @@
+main {
+  background-color: var(--White);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
 
+@media (min-width: 375px) {
+  main {
+    max-width: 500px;
+  }
+}
