@@ -1,0 +1,36 @@
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+.button-container :first-child {
+  height: 45px;
+  background-color: var(--BrightBlue);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  position: relative;
+  box-shadow: 1px 1rem 2rem 0px hsl(232.44deg 94.03% 89.28%);
+  cursor: pointer;
+}
+
+.button-container :last-child {
+  border: none;
+  color: var(--DesaturatedBlue);
+  font-weight: 900;
+  background-color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.button-container>button:first-child:hover {
+  background-color: hsl(245, 41%, 58%);
+}
+
+.button-container>button:last-child:hover {
+  color: var(--DarkBlue);
+}
