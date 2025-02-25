@@ -1,0 +1,28 @@
+.container {
+  background-color: var(--White);
+  padding: 1rem;
+  border-radius: 15px;
+  max-width: 327px;
+}
+
+.container img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-content {
+  text-align: center;
+  margin: 1.5rem .5rem;
+}
+
+.card-title {
+  font-size: 23px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--Slate-900);
+}
+
+.card-content p {
+  line-height: 1.5;
+}
+
