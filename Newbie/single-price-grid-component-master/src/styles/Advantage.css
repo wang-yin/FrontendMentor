@@ -1,0 +1,21 @@
+.advantage-container {
+  background-color: hsl(179, 50%, 63%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.advantage-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.advantage-container p {
+  margin-bottom: 5px;
+}
+
+@media (min-width: 500px) {
+  .advantage-container {
+    grid-area: c;
+    padding: 50px;
+  }
+}

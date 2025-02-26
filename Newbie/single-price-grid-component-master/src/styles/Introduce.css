@@ -1,0 +1,45 @@
+.introduce-container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 1.5rem;
+}
+
+.introduce-title {
+  color: var(--Cyan);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.guarantee {
+  color: var(--BrightYellow);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.introduce {
+  color: var(--GrayishBlue);
+  line-height: 1.7;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+@media (min-width: 500px) {
+  .introduce-container {
+    grid-area: a;
+    padding: 40px;
+  }
+
+  .introduce {
+    font-size: 16px;
+  }
+
+  .introduce-title {
+    font-size: 26px;
+  }
+
+  .guarantee {
+    font-size: 16px;
+  }
+}

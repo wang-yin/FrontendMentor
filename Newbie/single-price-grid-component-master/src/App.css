@@ -1,0 +1,15 @@
+main {
+  max-width: 650px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: 500px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "a a"
+    "b c";
+  }
+}
