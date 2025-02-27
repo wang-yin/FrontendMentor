@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 700px) {
+  main {
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 30px;
+  }
+}

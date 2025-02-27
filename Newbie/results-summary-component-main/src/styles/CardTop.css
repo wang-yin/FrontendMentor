@@ -1,0 +1,51 @@
+.top {
+  background: linear-gradient(to bottom, var(--LightSlateBlue), var(--LightRoyalBlue));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--LightLavender);
+  padding: 1rem 4rem 2rem 4rem;
+  border-radius: 0 0 30px 30px;
+}
+
+.circle {
+  background: linear-gradient(to top, var(--PersianBlue), var(--VioletBlue));
+  height: 7.5rem;
+  width: 7.5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.circle h1 {
+  color: var(--White);
+  font-size: 3rem;
+}
+
+.circle p {
+  color: var(--LightSlateBlue);
+  font-size: 0.778rem;
+  font-weight: 700;
+}
+
+.evaluation-text {
+  color: var(--White);
+  margin-bottom: .5rem;
+}
+
+.result-description {
+  color: var(--LightLavender);
+  font-size: 0.778rem;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .top {
+    border-radius: 30px;
+    max-width: 325px;
+    padding: 1rem;
+  }
+}
