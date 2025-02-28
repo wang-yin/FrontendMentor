@@ -1,42 +1,110 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+main {
+  background-color: var(--DesaturatedBlue);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.Mask {
+  position: relative;
+  display: inline-block;
+}
+
+.Mask::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--SoftViolet);
+  mix-blend-mode: multiply;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.content {
+  padding: 2rem 1rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.content h1 {
+  color: var(--White);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 30px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.content span {
+  color: var(--SoftViolet);
+}
+
+.paragraph {
+  color: var(--TransparentWhite);
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+.stats {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stats h2 {
+  color: var(--White);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
+.stats p {
+  color: var(--SlightlyTransparentWhite);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: row-reverse;
   }
-  to {
-    transform: rotate(360deg);
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    min-width: 100%;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .content {
+    padding: 4rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 3rem;
+  }
 
-.read-the-docs {
-  color: #888;
+  .paragraph {
+    text-align: left;
+    padding: 1rem 1rem 2rem 0;
+  }
+
+  .content h1 {
+    text-align: left;
+    padding-right: 2rem;
+  }
+
 }
