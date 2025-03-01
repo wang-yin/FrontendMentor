@@ -1,0 +1,94 @@
+form {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  grid-area: form;
+  box-shadow: 0px 8px 2px 0px hsla(249, 10%, 26%, 0.3);
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 1.15rem 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--GrayishBlue);
+  outline: none;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+input::placeholder {
+  font-size: 15px;
+}
+
+button {
+  border: none;
+  background-color: var(--Green);
+  border-radius: 10px;
+  padding: 1.3rem;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0px 8px 2px 0px hsla(154, 59%, 51%, 0.5);
+}
+
+.statement {
+  color: var(--GrayishBlue);
+  font-size: 11px;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.statement span {
+  color: var(--Red);
+  font-weight: 700;
+}
+
+
+/* Error style */
+
+.input-container .error input {
+  border: 2px solid var(--Red);
+}
+
+.input-container img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-100%);
+  width: 20px;
+}
+
+.input-container span {
+  color: var(--Red);
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.error input::placeholder {
+  color: var(--Red);
+}
+
+
+@media (min-width: 1440px) {
+  form {
+    padding: 2.5rem;
+    gap: 1.2;
+  }
+
+  input {
+    padding: 1.15rem 2rem;
+  }
+}
+
