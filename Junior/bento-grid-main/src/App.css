@@ -1,0 +1,288 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "col-one col-two col-three"
+    "col-one col-two col-three"
+    "col-one col-four col-four";
+  gap: 1rem;
+  max-width: 60rem;
+  margin-inline: auto;
+  margin-top: 4rem;
+}
+
+img {
+  max-width: 90%;
+  display: block;
+}
+.item {
+  border-radius: 10px;
+}
+
+/* create */
+.create {
+  background-color: var(--Yellow-100);
+  place-content: center;
+  padding: 1.7rem 2rem 2.3rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.create h2 {
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  font-size: 2.5rem;
+  line-height: 0.9;
+}
+.create i {
+  color: var(--Purple-500);
+}
+.create img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ai */
+.ai {
+  background-color: var(--Yellow-500);
+  place-content: center;
+  padding: 1.5rem;
+  display: grid;
+  gap: 2rem;
+}
+.ai h2 {
+  font-weight: 500;
+  letter-spacing: -2.5px;
+  font-size: 2.5rem;
+  line-height: 0.9;
+}
+.ai img {
+  max-width: 100%;
+  display: block;
+}
+
+/* media */
+.media {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+  place-items: center;
+  padding: 3rem;
+}
+.media h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.media span {
+  color: var(--Yellow-500);
+}
+.media img {
+  max-width: 10rem;
+}
+
+/* manage */
+.manage {
+  background-color: var(--White);
+  padding: 1rem 2rem 1rem 1rem;
+  overflow: hidden;
+}
+.manage h2 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  line-height: 0.8;
+  letter-spacing: -1px;
+}
+.manage img {
+  max-width: 160%;
+}
+
+/* maintain */
+.maintain {
+  background-color: var(--Yellow-500);
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.maintain h2 {
+  font-size: 1.9rem;
+  line-height: 0.8;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+.maintain img {
+  max-width: 80%;
+  position: absolute;
+  bottom: -3.5rem;
+}
+
+/* schedule */
+.schedule {
+  background-color: var(--Purple-100);
+  padding: 2.2rem 1.8rem;
+  overflow: hidden;
+}
+.schedule h2 {
+  font-size: 1.8rem;
+  line-height: 0.8;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+.schedule img {
+  max-width: 185%;
+}
+.schedule p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+/* audience */
+.audience {
+  background-color: var(--White);
+  padding: 1rem;
+}
+.audience h1 {
+  font-size: 3.3rem;
+  font-weight: 500;
+}
+.audience p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.audience img {
+  max-width: 80%;
+}
+
+/* grow */
+.grow {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-content: center;
+}
+.grow h1 {
+  font-size: 2rem;
+  line-height: 0.9;
+}
+.grow img {
+  max-width: 45%;
+}
+
+.element {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-one {
+  grid-area: col-one;
+  display: grid;
+  gap: 1rem;
+}
+
+.col-two {
+  grid-area: col-two;
+  display: grid;
+  gap: 1rem;
+}
+
+.col-three {
+  grid-area: col-three;
+  display: grid;
+}
+
+.col-four {
+  grid-area: col-four;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "col-one col-one"
+      "col-two col-three"
+      "col-two col-three"
+      "col-four col-four";
+  }
+  .col-one {
+    grid-template-columns: 1fr 1fr;
+  }
+  img {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "col-two"
+      "col-three"
+      "col-four"
+      "col-one";
+  }
+  .col-one {
+    grid-template-columns: 1fr;
+  }
+  .element {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .manage {
+    padding: 1rem;
+    place-items: center;
+  }
+  .manage h2 {
+    font-size: 2rem;
+  }
+  .manage img {
+    max-width: 100%;
+  }
+  .maintain {
+    padding: 1rem 3rem 0 1rem;
+  }
+  .maintain img {
+    max-width: 70%;
+    position: relative;
+    bottom: -1.5rem;
+  }
+  .schedule {
+    text-align: center;
+  }
+  .schedule img {
+    max-width: 100%;
+  }
+  .schedule p {
+    font-size: 1.5rem;
+  }
+  .col-four {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "grow"
+      "audience";
+  }
+  .grow {
+    grid-area: grow;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2.5rem;
+  }
+  .grow img {
+    max-width: 90%;
+  }
+  .grow h1 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .audience {
+    grid-area: audience;
+  }
+}
