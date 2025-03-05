@@ -1,0 +1,22 @@
+.results-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: var(--ff-800);
+  font-style: var(--fs-italic);
+}
+
+h1 span {
+  color: var(--Purple);
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 95px;
+  }
+
+}

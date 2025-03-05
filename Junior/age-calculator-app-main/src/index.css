@@ -1,0 +1,50 @@
+/* root */
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Off-White: hsl(0, 0%, 94%);
+  --Light-Grey: hsl(0, 0%, 86%);
+  --Smokey-Grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-Red: hsl(0, 100%, 67%);
+
+  --ff: "Poppins", sans-serif;
+
+  --fw-700: 700;
+  --fw-400: 400;
+  --fw-800: 800;
+
+  --fs-italic: italic;
+  --fs-inputs: 32px;
+  --fs-small: 14px;
+  --fs-error: 12px;
+}
+
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--Off-White);
+  font-family: var(--ff);
+  font-weight: var(--fw-800);
+  color: var(--Off-black);
+  padding: 6rem 1rem;
+}
+
+input, button {
+  border: none;
+}
+
+input:focus {
+  outline: 1px solid var(--Purple);
+}
+
+input:hover, button:hover {
+  cursor: pointer;
+}
