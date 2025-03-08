@@ -1,0 +1,72 @@
+/* root */
+:root {
+  --Green-200: hsl(148, 38%, 91%);
+  --Green-600: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-500: hsl(186, 15%, 59%);
+  --Grey-900: hsl(187, 24%, 22%);
+
+  --ff: "Karla", sans-serif;
+
+  --fs-labels: 1rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-labels);
+  background: var(--Green-200);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  color: var(--Grey-900);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input, fieldset>label, .contact-consent>label {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--Grey-900);
+}
+
+textarea {
+  padding: 1rem;
+  font-size: var(--fs-labels);
+}
+
+/* form */
+.main {
+  background: var(--White);
+  padding: 1.9rem;
+  margin-inline: auto;
+  border-radius: 10px;
+  max-width: 1024px;
+}
+
