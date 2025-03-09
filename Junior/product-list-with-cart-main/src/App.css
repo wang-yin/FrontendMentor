@@ -1,0 +1,24 @@
+.title {
+  padding: 10px 0 26px 0;
+  font-size: var(--fs-title);
+  grid-area: title;
+}
+
+.product-container {
+  grid-area: product;
+}
+
+.cart-container {
+  grid-area: cart;
+}
+
+@media screen and (min-width:1024px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "title title cart"
+      "product product cart";
+    column-gap: 3.2rem;
+  }
+}

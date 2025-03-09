@@ -1,0 +1,26 @@
+.cart {
+    background: var(--Rose-50);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+}
+
+.cart-title {
+  font-size: 1.45rem;
+  color: var(--Red);
+  margin-bottom: 2rem;
+}
+
+.empty-cart-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.cart > p {
+  text-align: center;
+  font-size: .9rem;
+  font-weight: var(--fw-600);
+  color: var(--Rose-500);
+  margin-bottom: 1rem;
+}
