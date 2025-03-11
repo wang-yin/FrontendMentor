@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import "../styles/Product.css";
+import AddToCartButton from "./AddToCartButton";
 
-function Product() {
+function Product({ addToCart, cart }) {
   const [dessertsInfo, setDessertsInfo] = useState([]);
-  console.log("dessertsInfo", dessertsInfo);
 
   const fetchData = async () => {
     try {
@@ -22,8 +22,8 @@ function Product() {
 
   return (
     <div className="product-item grid">
-      {dessertsInfo.map((product, index) => (
-        <div className="product-card" key={index}>
+      {dessertsInfo.map((product) => (
+        <div className="product-card" key={product.name}>
           <div className="product-img">
             <picture>
               <source
@@ -40,17 +40,7 @@ function Product() {
               />
               <img src={product.image?.mobile} alt={product.name} />
             </picture>
-            <button className="add-to-cart-button">
-              <div className="button-content">
-                <div>
-                  <img
-                    src="./assets/images/icon-add-to-cart.svg"
-                    alt="add-to-cart"
-                  ></img>
-                </div>
-                <span>Add to Cart</span>
-              </div>
-            </button>
+            <AddToCartButton product={product} addToCart={addToCart} cart={cart}/>
           </div>
           <div className="product-category">
             <p>{product.category}</p>
