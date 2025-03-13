@@ -4,6 +4,7 @@ import AddToCartButton from "./AddToCartButton";
 
 function Product({ addToCart, cart }) {
   const [dessertsInfo, setDessertsInfo] = useState([]);
+  const [addedItems, setAddedItems] = useState({});
 
   const fetchData = async () => {
     try {
@@ -20,11 +21,20 @@ function Product({ addToCart, cart }) {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    // 更新加入購物車的商品狀態
+    const updatedItems = {};
+    cart.forEach((item) => {
+      updatedItems[item.name] = true;
+    });
+    setAddedItems(updatedItems);
+  }, [cart]);
+
   return (
     <div className="product-item grid">
       {dessertsInfo.map((product) => (
         <div className="product-card" key={product.name}>
-          <div className="product-img">
+          <div className={`product-img ${addedItems[product.name] ? "added-to-cart-border" : ""}`}>
             <picture>
               <source
                 srcSet={product.image?.desktop}
@@ -40,7 +50,11 @@ function Product({ addToCart, cart }) {
               />
               <img src={product.image?.mobile} alt={product.name} />
             </picture>
-            <AddToCartButton product={product} addToCart={addToCart} cart={cart}/>
+            <AddToCartButton
+              product={product}
+              addToCart={addToCart}
+              cart={cart}
+            />
           </div>
           <div className="product-category">
             <p>{product.category}</p>

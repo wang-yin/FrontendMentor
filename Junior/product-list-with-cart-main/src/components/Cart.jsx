@@ -1,6 +1,6 @@
 import "../styles/Cart.css";
 
-function Cart({ cart, totalPrice, removeFromCart }) {
+function Cart({ cart, totalPrice, removeFromCart, orderConfirmed }) {
   return (
     <div className="cart">
       <h3 className="cart-title">Your Cart ({cart.length})</h3>
@@ -42,7 +42,7 @@ function Cart({ cart, totalPrice, removeFromCart }) {
               <hr></hr>
             </>
           ))}
-          <div className="aaa123">
+          <div className="order">
             <div className="order-total-container">
               <p className="order-total">Order Total</p>
               <h2 className="order-total-price">${totalPrice()}</h2>
@@ -57,7 +57,7 @@ function Cart({ cart, totalPrice, removeFromCart }) {
                 delivery
               </p>
             </div>
-            <button className="confirm-order-button">Confirm Order</button>
+            <button className="confirm-order-button" onClick={orderConfirmed}>Confirm Order</button>
           </div>
         </>
       )}

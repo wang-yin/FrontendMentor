@@ -37,6 +37,13 @@
   font-weight: var(--fw-600);
 }
 
+.added-to-cart-border {
+  border: 2px solid var(--Red);
+  border-radius: 10px;
+  padding: 5px;
+  transition: border 0.3s ease-in-out;
+}
+
 
 /* RWD */
 @media screen and (max-width:768px) and (min-width:425px) {

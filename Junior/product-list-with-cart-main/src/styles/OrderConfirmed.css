@@ -1,0 +1,123 @@
+.order-confirmed-container {
+  background: var(--Rose-50);
+  padding: 1.5rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  border-radius: 10px 10px 0 0;
+}
+
+.order-confirmed-container>img {
+  margin-top: 1rem;
+}
+
+.order-confirmed-title {
+  font-size: 2.5rem;
+}
+
+.order-confirmed-text {
+  color: var(--Rose-400);
+  margin-bottom: 1.5rem;
+}
+
+.order-confirmed-info-container {
+  background: var(--Rose-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+.order-confirmed-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-confirmed-product-detail {
+  line-height: 1.8;
+  margin-left: 1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.order-confirmed-product-name {
+  font-size: 14px;
+  font-weight: var(--fw-600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 155px;
+}
+
+.order-confirmed-product-quantity {
+  color: var(--Red);
+  font-weight: var(--fw-600);
+}
+
+.order-confirmed-product-quantity>span {
+  color: var(--Rose-400);
+  margin-left: 1.5rem;
+  font-weight: var(--fw-400);
+}
+
+.order-confirmed-product-totalprice {
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw-600);
+}
+
+.order-confirmed-product-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.order-confirmed-product-img>img {
+  width: 100%;
+}
+
+.order-confirmed-product-total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-confirmed-product-total-price>p {
+  font-size: 14px;
+}
+
+.order-confirmed-product-total-price>h3 {
+  font-size: 22px;
+}
+
+.new-order-button {
+  width: 100%;
+  margin-top: 1.5rem;
+  height: 3rem;
+  background: var(--Red);
+  color: var(--Rose-50);
+  border: none;
+  border-radius: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .order-confirmed-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 40vw;
+    max-width: 1200px;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-confirmed-info-container {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+}

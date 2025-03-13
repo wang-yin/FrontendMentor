@@ -27,7 +27,7 @@ function AddToCartButton({ product, addToCart, cart }) {
   useEffect(() => {
   if (!cart) return;
 
-  // 檢查購物車內是否還有這個商品
+  
   const itemInCart = cart.find(item => item.name === product.name);
 
   if (itemInCart) {
