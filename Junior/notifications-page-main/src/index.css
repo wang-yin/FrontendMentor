@@ -1,0 +1,45 @@
+/* root */
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --White: hsl(0, 0%, 100%);
+  --Blue: hsl(219, 85%, 26%);
+  --Very-light-grayish-blue: hsl(210, 60%, 98%);
+  --Light-grayish-blue-1: hsl(211, 68%, 94%);
+  --Light-grayish-blue-2: hsl(205, 33%, 90%);
+  --Grayish-blue: hsl(219, 14%, 63%);
+  --Dark-grayish-blue: hsl(219, 12%, 42%);
+  --Very-dark-blue: hsl(224, 21%, 14%);
+
+  --ff: "Plus Jakarta Sans", sans-serif;
+
+  --fs-content: 14px;
+
+  --fw-500: 500;
+  --fw-800: 800;
+}
+
+/* reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: 16px;
+  background: var(--Very-light-grayish-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

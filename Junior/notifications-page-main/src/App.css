@@ -1,0 +1,23 @@
+main {
+  background: var(--White);
+  padding: 2rem 1rem;
+  max-width: 600px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header span {
+  background: var(--Blue);
+  color: var(--White);
+  font-size: 16px;
+  padding: .1rem .6rem;
+  border-radius: 5px;
+}
+
+.header p {
+  color: var(--Grayish-blue);
+  font-weight: var(--fw-500);
+  font-size: var(--fs-content);
+}
