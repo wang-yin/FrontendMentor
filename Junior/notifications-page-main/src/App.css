@@ -1,7 +1,7 @@
 main {
   background: var(--White);
   padding: 2rem 1rem;
-  max-width: 600px;
+  max-width: 630px;
 }
 
 .header {
@@ -20,4 +20,11 @@ main {
   color: var(--Grayish-blue);
   font-weight: var(--fw-500);
   font-size: var(--fs-content);
+}
+
+
+/* active */
+.header p:hover {
+  cursor: pointer;
+  color: var(--Blue);
 }

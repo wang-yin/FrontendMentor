@@ -1,41 +1,50 @@
 import "../styles/Messages.css"
 
-function Messages() {
+function Messages({ isMark }) {
   return (
     <div className="messages-container">
-      <div className="message">
+      <div className={`${isMark === true ? "message" : "message unread"}`}>
         <div className="avatar-container">
-          <img src="/assets/images/avatar-mark-webber.webp"></img>
+          <img src="/assets/images/avatar-mark-webber.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
-          <p className="message-text"><span className="name">Mark Webber</span> reacted to your recent post <span className="post-title">My first tournament today!</span></p>
+          <p className="message-text"><span className="name">Mark Webber</span> reacted to your recent post <span className="post-title">My first tournament today!</span> {!isMark &&(
+            <div className="unread-mark"></div>
+          )}
+          </p>
           <p className="time">1m ago</p>
         </div>
       </div>
 
-      <div className="message">
+      <div className={`${isMark === true ? "message" : "message unread"}`}>
         <div className="avatar-container">
-          <img src="/assets/images/avatar-angela-gray.webp"></img>
+          <img src="/assets/images/avatar-angela-gray.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
-          <p className="message-text"><span className="name">Angela Gray</span> followed you</p>
+          <p className="message-text"><span className="name">Angela Gray</span> followed you{!isMark &&(
+            <div className="unread-mark"></div>
+          )}
+          </p>
           <p className="time">5m ago</p>
         </div>
       </div>
 
-      <div className="message">
+      <div className={`${isMark === true ? "message" : "message unread"}`}>
         <div className="avatar-container">
-          <img src="/assets/images/avatar-jacob-thompson.webp"></img>
+          <img src="/assets/images/avatar-jacob-thompson.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
-          <p className="message-text"><span className="name">Jacob Thompson</span> has joined your group <span className="group-name">Chess Club</span></p>
+          <p className="message-text"><span className="name">Jacob Thompson</span> has joined your group <span className="group-name">Chess Club</span>{!isMark &&(
+            <div className="unread-mark"></div>
+          )}
+          </p>
           <p className="time">1 days ago</p>
         </div>
       </div>
 
       <div className="message">
         <div className="avatar-container">
-          <img src="/assets/images/avatar-rizky-hasanuddin.webp"></img>
+          <img src="/assets/images/avatar-rizky-hasanuddin.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
           <p className="message-text"><span className="name">Rizky Hasanuddin</span> sent you a private message</p>
@@ -50,18 +59,18 @@ function Messages() {
 
       <div className="message">
         <div className="avatar-container">
-          <img src="/assets/images/avatar-kimberly-smith.webp"></img>
+          <img src="/assets/images/avatar-kimberly-smith.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
           <p className="message-text"><span className="name">Kimberly Smith</span> commented on your picture</p>
           <p className="time">1 week ago</p>
         </div>
-        <div className="picture"><img src="/assets/images/image-chess.webp"></img></div>
+        <div className="picture"><img src="/assets/images/image-chess.webp" alt="post-img"></img></div>
       </div>
 
       <div className="message">
         <div className="avatar-container">
-          <img src="/assets/images/avatar-nathan-peterson.webp"></img>
+          <img src="/assets/images/avatar-nathan-peterson.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
           <p className="message-text"><span className="name">Nathan Peterson</span> reacted to your recent post <span className="post-title">5 end-game strategies to increase your win rate</span></p>
@@ -71,7 +80,7 @@ function Messages() {
 
       <div className="message">
         <div className="avatar-container">
-          <img src="/assets/images/avatar-anna-kim.webp"></img>
+          <img src="/assets/images/avatar-anna-kim.webp" alt="avatar"></img>
         </div>
         <div className="message-content">
           <p className="message-text"><span className="name">Anna Kim</span> left the group <span className="group-name">Chess Club</span></p>

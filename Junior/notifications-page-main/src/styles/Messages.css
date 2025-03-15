@@ -11,6 +11,7 @@
   padding: 1rem;
   border-radius: 8px;
 }
+
 .avatar-container {
   width: 40px;
   height: 40px;
@@ -35,6 +36,7 @@
   color: var(--Grayish-blue);
   font-size: var(--fs-content);
 }
+
 
 /* event */
 .post-title {
@@ -66,3 +68,33 @@
 }
 
 
+/* unread */
+.unread {
+  background: var(--Very-light-grayish-blue);
+}
+
+.unread-mark {
+  background: var(--Red);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: .4rem;
+}
+
+
+/* active */
+.post-title:hover, .group-name:hover, .name:hover {
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.private-message-container:hover {
+  background: var(--Light-grayish-blue-1);
+  cursor: pointer;
+  border: 1px solid var(--Light-grayish-blue-1);
+}
+
+.picture:hover {
+  cursor: pointer;
+}
