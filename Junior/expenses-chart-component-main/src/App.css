@@ -1,0 +1,15 @@
+.balance-container {
+  background: var(--Soft-Red);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.data-container{
+  background: var(--Very-Pale-Orange);
+  padding: 1.5rem;
+  border-radius: 10px;
+}

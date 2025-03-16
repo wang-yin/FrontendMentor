@@ -1,0 +1,53 @@
+.bar-chart-container {
+  place-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: .5rem;
+}
+
+.bar-chart {
+  display: flex;
+  flex-direction: row;
+  background: var(--Soft-Red);
+  width: 2rem;
+  border-radius: 5px;
+}
+
+.chart-label {
+  color: var(--Medium-Brown);
+}
+
+.mon {
+  height: 50px;
+}
+
+.tue {
+  height: 100px;
+}
+
+.wed {
+  height: 150px;
+  background: var(--Cyan);
+}
+
+.thu {
+  height: 90px;
+}
+
+.fri {
+  height: 68px;
+}
+
+.sat {
+  height: 120px;
+}
+
+.sun {
+  height: 75px;
+}
+
+@media screen and (min-width: 768px) {
+  .bar-chart {
+    width: 50px;
+  }
+}

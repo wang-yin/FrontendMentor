@@ -1,0 +1,60 @@
+.data-title{
+  font-size: 1.4rem;
+}
+
+.chart {
+  margin-top: 2.5rem;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: .5rem;
+}
+
+hr {
+  border: 1px solid var(--Cream);
+  margin: 2rem 0;
+}
+
+.monthly-summary{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.monthly-summary-label {
+  color: var(--Medium-Brown);
+}
+
+.monthly-summary-total {
+  font-size: 2rem;
+}
+
+.monthly-summary-change {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.monthly-summary-percentage {
+  text-align: end;
+  font-size: 16px;
+  font-weight: var(--fw-700);
+}
+
+.monthly-summary-comparison {
+  color: var(--Medium-Brown);
+}
+
+@media screen and (min-width: 768px) {
+  .data-title {
+    font-size: 2rem;
+  }
+
+  .chart {
+    gap: 1rem;
+  }
+
+  .monthly-summary-total {
+    font-size: 2.8rem;
+  }
+}
