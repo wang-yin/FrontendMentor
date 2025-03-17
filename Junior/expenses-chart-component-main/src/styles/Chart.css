@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column-reverse;
   gap: .5rem;
+  max-width: 50px;
+}
+
+.hovered {
+  background: black;
+  color: var(--Very-Pale-Orange);
+  padding: .3rem;
+  border-radius: 5px;
 }
 
 .bar-chart {
@@ -11,6 +19,11 @@
   background: var(--Soft-Red);
   width: 2rem;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.bar-chart:hover {
+  opacity: 70%;
 }
 
 .chart-label {

@@ -3,10 +3,10 @@
 }
 
 .chart {
-  margin-top: 2.5rem;
-  height: 200px;
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  position: relative;
+  margin-top: .5rem;
+  height: 230px;
+  display: flex;
   gap: .5rem;
 }
 

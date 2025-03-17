@@ -1,42 +1,42 @@
+import { useEffect, useState } from "react"
 import "../styles/Chart.css"
 
 function Chart () {
+  const [isHovered, setIsHovered] = useState(null)
+  const [expenses, setExpenses] = useState([])
+
+  const fetchData = async () => {
+    try {
+      const result = await fetch("/data.json").then((response) =>
+        response.json()
+      )
+      setExpenses(result)
+    } catch (error) {
+      console.error("Failed to fetch data:", error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const handleMouseEnter = (index) => {
+    setIsHovered(index)
+  }
+
+  const handleMouseLeave = () => {
+    setIsHovered(null)
+  }
+
   return(
     <>
-    <div className="bar-chart-container">
-      <p className="chart-label">mon</p>
-      <div className="bar-chart mon"></div>
-    </div>
-
-    <div className="bar-chart-container">
-      <p className="chart-label">tue</p>
-      <div className="bar-chart tue"></div>
-    </div>
-
-    <div className="bar-chart-container">
-      <p className="chart-label">wed</p>
-      <div className="bar-chart wed"></div>
-    </div>
-
-    <div className="bar-chart-container">
-      <p className="chart-label">thu</p>
-      <div className="bar-chart thu"></div>
-    </div>
-
-    <div className="bar-chart-container">
-      <p className="chart-label">fri</p>
-      <div className="bar-chart fri"></div>
-    </div>
-
-    <div className="bar-chart-container">
-      <p className="chart-label">sat</p>
-      <div className="bar-chart sat"></div>
-    </div>
-
-    <div className="bar-chart-container">
-      <p className="chart-label">sun</p>
-      <div className="bar-chart sun"></div>
-    </div>
+    {expenses.map((expense, index) => (
+      <div className="bar-chart-container" key={expense.day}>
+        <p className="chart-label">{expense.day}</p>
+        <div className={`bar-chart ${expense.day}`} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}></div>
+        {isHovered === index && <p className="hovered">${expense.amount}</p>}
+      </div>
+    ))}
     </>
   )
 }
