@@ -1,8 +1,24 @@
 .form-container {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .result-container {
   background: var(--Slate-900);
   color: var(--White);
+}
+
+@media (min-width: 1024px) {
+  .form-container,.result-container {
+    flex: 1;
+  }
+  .form-container {
+    padding: 1.5rem 2rem;
+  }
+  .result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0 0 5rem;
+    padding: 0;
+  }
 }

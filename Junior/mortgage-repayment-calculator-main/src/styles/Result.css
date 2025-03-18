@@ -3,10 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1.5rem;
+  line-height: 1.5;
 }
 
 .result>p {
   text-align: center;
+  margin-top: 1rem;
+  color: var(--Slate-300);
+  font-weight: var(--fw-500);
 }
+
 

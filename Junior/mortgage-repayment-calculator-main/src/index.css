@@ -30,11 +30,48 @@
 body {
   font-family: var(--ff);
   font-size: var(--fs);
+  background-color: var(--Slate-100);
 }
 
-input[type="text"], button {
+main {
+  background-color: var(--White);
+}
+
+input[type="text"] {
   width: 100%;
   border: none;
   padding: .75rem 1rem;
   font-size: 1.15rem;
+}
+
+button {
+  border: none;
+  padding: .75rem 1rem;
+  font-size: 1.15rem;
+  font-family: var(--ff);
+}
+
+label, legend {
+  font-weight: var(--fw-500);
+}
+
+
+@media (min-width: 768px) {
+  main {
+    margin: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  main {
+    display: flex;
+    max-width: 960px;
+  }
 }

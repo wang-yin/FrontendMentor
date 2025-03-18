@@ -21,6 +21,16 @@ form {
 /* design */
 .form-title {
   color: var(--Slate-900);
+  margin: 1rem 0 .5rem;
+}
+
+#clear-all {
+  background-color: transparent;
+  text-decoration: underline;
+  color: var(--Slate-700);
+  padding: 0;
+  text-align: start;
+  font-size: 1rem;
 }
 
 .form-control {
@@ -40,6 +50,7 @@ form {
   align-items: center;
   padding: .75rem 1rem;
   font-weight: var(--fw-700);
+  font-size: 1.15rem;
 }
 
 .type-container {
@@ -65,4 +76,38 @@ form {
 
 fieldset {
   border: none;
+}
+
+.button-submit {
+  background: var(--Lime);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.15rem;
+  font-weight: var(--fw-700);
+  border-radius: 30px;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .term-rate {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .type-container {
+    margin: .5rem 0;
+  }
+
+  .button-submit {
+    width: 75%;
+    padding: 1rem 2.5rem;
+  }
 }
