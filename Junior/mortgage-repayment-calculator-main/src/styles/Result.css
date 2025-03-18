@@ -1,0 +1,12 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.result>p {
+  text-align: center;
+}
+

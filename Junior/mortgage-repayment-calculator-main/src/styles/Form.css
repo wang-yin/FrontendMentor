@@ -1,0 +1,68 @@
+/* layout */
+form {
+  gap: 1.25rem; 
+}
+
+/* auxiliary */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.mb {
+  margin-bottom: .5rem;
+  color: var(--Slate-700);
+}
+
+/* design */
+.form-title {
+  color: var(--Slate-900);
+}
+
+.form-control {
+  color: var(--Slate-700);
+}
+
+.frame {
+  border: 1px solid var(--Slate-500);
+  align-items: stretch;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.unit {
+  background: var(--Slate-100);
+  display: flex;
+  align-items: center;
+  padding: .75rem 1rem;
+  font-weight: var(--fw-700);
+}
+
+.type-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--Slate-700);
+  border-radius: 5px;
+  padding: .75rem 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+  margin: .75rem 0;
+}
+
+.type-container>input {
+  transform: scale(1.5);
+}
+
+.type-container>label {
+  font-size: 1.15rem;
+  font-weight: var(--fw-700);
+  color: var(--Slate-900);
+}
+
+fieldset {
+  border: none;
+}

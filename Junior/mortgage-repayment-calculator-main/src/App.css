@@ -1,0 +1,8 @@
+.form-container {
+  padding: 1rem;
+}
+
+.result-container {
+  background: var(--Slate-900);
+  color: var(--White);
+}
