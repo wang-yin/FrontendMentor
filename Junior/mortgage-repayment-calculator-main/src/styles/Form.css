@@ -64,14 +64,17 @@ form {
   margin: .75rem 0;
 }
 
+
 .type-container>input {
   transform: scale(1.5);
+  accent-color:var(--Lime);
 }
 
 .type-container>label {
   font-size: 1.15rem;
   font-weight: var(--fw-700);
   color: var(--Slate-900);
+  width: 100%;
 }
 
 fieldset {
@@ -89,6 +92,37 @@ fieldset {
   font-weight: var(--fw-700);
   border-radius: 30px;
   margin-bottom: 1.25rem;
+}
+
+/* active */
+input:focus-visible {
+  outline: none;
+}
+.flex:has(input:focus) p  {
+  background-color:  var(--Lime);
+}
+.flex:has(input:focus)  {
+  border: 1px solid var(--Lime);
+}
+.type-container:has(input:checked) {
+  background-color: rgba(215, 218, 47, 0.2);
+  border: 1px solid var(--Lime);
+}
+
+/* error */
+.error-msg {
+  font-size: 0.9rem;
+  color: var(--Red);
+  margin-top: 0.75rem;
+}
+
+.error {
+  border: 1px solid var(--Red);
+}
+
+.error p {
+  background: var(--Red);
+  color: var(--White);
 }
 
 @media (min-width: 1024px) {

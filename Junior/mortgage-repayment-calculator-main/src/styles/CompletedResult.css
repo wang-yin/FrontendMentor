@@ -1,0 +1,40 @@
+.completed-result {
+  padding: 2rem 1.75rem;
+}
+
+.completed-result>p {
+  margin: .75rem 0 2.5rem;
+  color: var(--Slate-300);
+}
+
+.info {
+  padding: 2rem;
+  background-color: #0e2431;
+  border-top: 5px solid var(--Lime);
+  border-radius: 5px;
+}
+
+.info>p {
+  margin: .25rem 0;
+  color: var(--Slate-300);
+}
+
+h1 {
+  font-size: 3.25rem;
+  color: var(--Lime);
+  margin-bottom: 1rem;
+}
+
+.total {
+  padding: 1.5rem 0;
+  margin: .25rem;
+  color: var(--Slate-300);
+}
+
+.total-amount {
+  font-size: 1.5rem;
+}
+
+hr {
+  border: 1px solid var(--Slate-300);
+}

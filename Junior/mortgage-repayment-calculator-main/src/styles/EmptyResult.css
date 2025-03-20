@@ -1,4 +1,4 @@
-.result {
+.empty-result {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +7,7 @@
   line-height: 1.5;
 }
 
-.result>p {
+.empty-result>p {
   text-align: center;
   margin-top: 1rem;
   color: var(--Slate-300);

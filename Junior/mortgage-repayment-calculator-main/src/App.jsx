@@ -1,6 +1,7 @@
 import './App.css'
 import Form from './components/Form'
-import Result from './components/Result'
+import EmptyResult from './components/EmptyResult'
+import CompletedResult from './components/CompletedResult'
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
         <Form />
       </div>
       <div className='result-container'>
-        <Result />
+        <CompletedResult />
       </div>
     </>
   )
