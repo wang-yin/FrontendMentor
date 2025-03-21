@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "../styles/Form.css";
+import { calculatePayement } from "../../utils/calculate"
 
-function Form() {
+function Form({ onCalculator, getvalue }) {
   const [formData, setFormData] = useState({
     amount: "",
     term: "",
@@ -10,40 +11,75 @@ function Form() {
   });
   const [errors, setErrors] = useState({});
 
-  const validate = (value) => {
+  const validateNumber = (value) => {
     return isNaN(value) || value === "";
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const validate = () => {
     let newErrors = {};
 
     if (!formData.amount.trim()) {
       newErrors.amount = "This field is required";
-    } else if (validate(formData.amount)) {
+    } else if (validateNumber(formData.amount)) {
       newErrors.amount = "Not a number";
     }
     if (!formData.term.trim()) {
       newErrors.term = "This field is required";
-    } else if (validate(formData.term)) {
+    } else if (validateNumber(formData.term)) {
       newErrors.term = "Not a number";
     }
     if (!formData.rate.trim()) {
       newErrors.rate = "This field is required";
-    } else if (validate(formData.rate)) {
+    } else if (validateNumber(formData.rate)) {
       newErrors.rate = "Not a number";
     }
     if (!formData.type) {
       newErrors.type = "This field is required";
     }
 
-    console.log(newErrors);
-    setErrors(newErrors);
+    return newErrors
+  }
+
+  
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = validate();
+    if(Object.keys(newErrors).length > 0) {
+      setErrors(newErrors)
+    } else {
+      setErrors({})
+      onCalculator(true)
+      const result = calculatePayement(formData.amount, formData.rate, formData.term, formData.type)
+      getvalue(result)
+    }
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const { name, value } = e.target;
+
+  if (name === "amount") {
+    const rawValue = value.replace(/,/g, "");
+    if (isNaN(rawValue)) return; 
+
+
+    setFormData({
+      ...formData,
+      [name]: rawValue, 
+    });
+  } else {
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  }
+};
+
+  const onReset = () => {
+    setFormData({ amount: "", term: "", rate: "", type: "" });
+    setErrors({});
+    onCalculator(false)
+  }
   return (
     <form className="flex-column form" onSubmit={handleSubmit} noValidate>
       <div className="header">
@@ -51,10 +87,7 @@ function Form() {
         <button
           type="reset"
           id="clear-all"
-          onClick={() => {
-            setFormData({ amount: "", term: "", rate: "", type: "" });
-            setErrors({});
-          }}
+          onClick={onReset}
         >
           Clear All
         </button>
@@ -69,7 +102,7 @@ function Form() {
             id="amount"
             type="text"
             name="amount"
-            value={formData.amount}
+            value={formData.amount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
             onChange={handleChange}
           ></input>
         </div>
