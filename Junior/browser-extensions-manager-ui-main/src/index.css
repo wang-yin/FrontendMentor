@@ -30,3 +30,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-size: var(--fs);
+  font-family: var(--ff);
+  background: var(--Neutral-200);
+  padding: 1.5rem 0;
+}
+
+#root {
+  margin-inline: 1rem;
+}
+
+/* mode */
+.dark-mode {
+  background: var(--Neutral-900);
+}

@@ -1,0 +1,65 @@
+.extension-item {
+  background: var(--Neutral-0);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.extension-info {
+  display: flex;
+}
+
+.extension-icon {
+  align-self: start;
+}
+
+.extension-details {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-left: 1rem;
+}
+
+.extension-name {
+  color: var(--Neutral-900);
+}
+
+.extension-description {
+  color: var(--Neutral-600);
+  font-weight: var(--fw-400);
+}
+
+.extension-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.remove-button {
+  background: var(--Neutral-0);
+  padding: .5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--Neutral-300);
+  font-family: var(--ff);
+  font-weight: var(--fw-500);
+  color: var(--Neutral-900);
+  font-size: .9rem;
+}
+
+/* dark mode */
+.dark-mode-extension-item {
+  background: var(--Neutral-700);
+}
+
+.dark-mode-extension-name {
+  color: var(--Neutral-0);
+}
+
+.dark-mode-extension-description {
+  color: var(--Neutral-100);
+}
+
+.dark-mode-remove-button {
+  background: var(--Neutral-800);
+  color: var(--Neutral-0);
+}
+

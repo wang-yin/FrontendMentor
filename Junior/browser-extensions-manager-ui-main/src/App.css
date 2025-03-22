@@ -1,0 +1,55 @@
+.header {
+  background: var(--Neutral-0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+}
+
+.content {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--Neutral-900);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.filter-btn {
+  padding: .75rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  font-size: var(--fs);
+  font-weight: var(--fw-500);
+  font-family: var(--ff);
+  color: var(--Neutral-900);
+  background: var(--Neutral-0)
+}
+
+.manager-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+
+
+
+/* dark mode */
+.dark {
+  background: var(--Neutral-700);
+}
+
+.dark-mode-title {
+  color: var(--Neutral-0);
+}
+
+.dark-mode-btn {
+  background: var(--Neutral-700);
+  color: var(--Neutral-0);
+}
