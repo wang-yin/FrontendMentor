@@ -8,6 +8,8 @@
   --Neutral-200: hsl(217, 61%, 90%);
   --Neutral-100: hsl(0, 0%, 93%);
   --Neutral-0: hsl(200, 60%, 99%);
+  --BG-dark: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --BG-light: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
   --Red-400: hsl(3, 86%, 64%);
   --Red-500: hsl(3, 71%, 56%); 
   --Red-700: hsl(3, 77%, 44%);
@@ -34,7 +36,7 @@
 body {
   font-size: var(--fs);
   font-family: var(--ff);
-  background: var(--Neutral-200);
+  background: var(--BG-light);
   padding: 1.5rem 0;
 }
 
@@ -44,5 +46,18 @@ body {
 
 /* mode */
 .dark-mode {
-  background: var(--Neutral-900);
+  background: var(--BG-dark);
+}
+
+
+
+/* RWD */
+@media (min-width: 1024px) {
+  body {
+    padding: 2rem 0 3rem;
+  }
+
+  #root {
+    margin-inline: 7.5rem;
+  }
 }

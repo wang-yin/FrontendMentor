@@ -6,10 +6,26 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+  cursor: pointer;
+}
+
+/* hover */
+.switch-model:hover {
+  background: var(--Neutral-300);
+}
+
+/* focus */
+.switch-model:focus-visible {
+  outline: 2px solid var(--Red-700);
 }
 
 
-/* dark */
+/* dark mode */
 .switch-model-dark {
+  background: var(--Neutral-700);
+}
+
+/* dark mode hover */
+.switch-model-dark:hover {
   background: var(--Neutral-600);
 }

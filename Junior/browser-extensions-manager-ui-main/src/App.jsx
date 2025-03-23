@@ -5,6 +5,7 @@ import ThemeSwitcher from "./components/ThemeSwitcher";
 import ExtensionList from "./components/ExtensionList";
 
 function App() {
+  const [selected, setSelected] = useState("All")
   const storedTheme = localStorage.getItem("theme") || "light";
   const [theme, setTheme] = useState(storedTheme)
 
@@ -22,9 +23,9 @@ function App() {
       <div className="content">
         <h1 className={`title ${theme}-mode-title`}>Extensions List</h1>
         <div className="filter-buttons">
-          <button className={`filter-btn ${theme}-mode-btn`}>All</button>
-          <button className={`filter-btn ${theme}-mode-btn`}>Active</button>
-          <button className={`filter-btn ${theme}-mode-btn`}>Inactive</button>
+          {["All", "Active", "Inactive"].map((filter) => (
+            <button key={filter} className={`filter-btn ${theme}-mode-btn ${selected === filter ? "active" : ""}`} onClick={() => setSelected(filter)}>{filter}</button>
+          ))}
         </div>
       </div>
       <div className="manager-container">

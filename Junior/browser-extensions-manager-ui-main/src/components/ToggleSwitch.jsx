@@ -4,7 +4,7 @@ function ToggleSwitch({ theme }) {
   return(
     <label className="toggle-switch">
       <input className="toggle-checkbox" type="checkbox"></input>
-      <span className={`slider ${theme}-mode-slider`}></span>
+      <span className={`slider ${theme}-mode-slider`} tabIndex="1"></span>
     </label>
   )
 }

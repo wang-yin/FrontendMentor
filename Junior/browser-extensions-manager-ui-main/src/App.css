@@ -4,6 +4,8 @@
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
+  border-radius: 15px;
+  border: 1px solid var(--Neutral-200);
 }
 
 .content {
@@ -22,12 +24,18 @@
 .filter-btn {
   padding: .75rem 1.5rem;
   border-radius: 30px;
-  border: none;
+  border: 1px solid var(--Neutral-200);
   font-size: var(--fs);
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-400);
   font-family: var(--ff);
   color: var(--Neutral-900);
-  background: var(--Neutral-0)
+  background: var(--Neutral-0);
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  background-color: var(--Red-700);
+  color: var(--Neutral-0);
 }
 
 .manager-container {
@@ -37,12 +45,21 @@
   gap: .8rem;
 }
 
+/* hover */
+.filter-btn:hover {
+  background: var(--Neutral-100);
+  color: var(--Neutral-600);
+}
 
-
+/* focus */
+.filter-btn:focus-visible {
+  outline: 2px solid var(--Red-700);
+}
 
 /* dark mode */
 .dark {
-  background: var(--Neutral-700);
+  background: var(--Neutral-800);
+  border: none;
 }
 
 .dark-mode-title {
@@ -52,4 +69,63 @@
 .dark-mode-btn {
   background: var(--Neutral-700);
   color: var(--Neutral-0);
+  border: 1px solid var(--Neutral-600);
+}
+
+.dark-mode-btn.active {
+  background-color: var(--Red-400);
+  color: var(--Neutral-900);
+}
+
+/* dark mode hover */
+.dark-mode-btn:hover {
+  background: var(--Neutral-600);
+  color: var(--Neutral-0);
+}
+
+.filter-btn.active:hover {
+  background: var(--Red-500);
+}
+
+
+
+/* dark mode focus */
+.dark-mode-btn:focus-visible {
+  background: var(--Neutral-600);
+  color: var(--Neutral-0);
+  border: 1px solid var(--Neutral-900);
+}
+
+
+/* RWD */
+@media (min-width: 768px) {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+  .manager-container {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin-top: 4rem;
+  }
+  .manager-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

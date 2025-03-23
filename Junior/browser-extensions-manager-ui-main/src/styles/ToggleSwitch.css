@@ -44,7 +44,35 @@ input:checked+.slider::before {
   transform: translateX(16px);
 }
 
-/* dark mode*/
+/* hover */
+input:checked+.slider:hover {
+  background-color: var(--Red-500);
+}
+
+/* focus */
+span:focus-visible {
+  outline: 2px solid var(--Red-700);
+  border: 1px solid var(--Neutral-0);
+}
+
+
+
+/* dark mode */
+.dark-mode-slider {
+  background-color: var(--Neutral-600);
+}
+
 input:checked+.dark-mode-slider {
   background-color: var(--Red-400);
+}
+
+
+/* dark mode hover */
+input:checked+.dark-mode-slider:hover {
+  background-color: var(--Red-500);
+}
+
+/* dark mode focus */
+.dark-mode-slider:focus-visible {
+  border: 1px solid var(--Neutral-900);
 }
