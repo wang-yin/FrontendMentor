@@ -33,17 +33,24 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 body {
   font-size: var(--fs);
   font-family: var(--ff);
   background: var(--BG-light);
-  padding: 1.5rem 0;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  height: 100vh;
 }
 
 #root {
-  margin-inline: 1rem;
+  margin-inline: auto;
+  padding: 2rem;
+  max-width: 76rem;
 }
 
 /* mode */
@@ -54,13 +61,3 @@ body {
 
 
 
-/* RWD */
-@media (min-width: 1024px) {
-  body {
-    padding: 2rem 0 3rem;
-  }
-
-  #root {
-    margin-inline: 7.5rem;
-  }
-}

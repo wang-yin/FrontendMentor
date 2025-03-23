@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .5rem;
-  border-radius: 15px;
+  padding: .75rem;
+  border-radius: .75rem;
   border: 1px solid var(--Neutral-200);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
@@ -13,6 +13,10 @@
   text-align: center;
   margin-top: 2rem;
   color: var(--Neutral-900);
+}
+
+.title {
+  font-size: 1.75rem;
 }
 
 .filter-buttons {
@@ -122,9 +126,19 @@
 }
 
 @media (min-width: 1024px) {
-  .content {
-    margin-top: 4rem;
+  .header {
+    padding: 1rem;
+    border-radius: 1rem;
   }
+  
+  .content {
+    margin-top: 5rem;
+  }
+
+  .title {
+    font-size: 2.15rem;
+  }
+
   .manager-container {
     margin-top: 2rem;
     display: grid;
