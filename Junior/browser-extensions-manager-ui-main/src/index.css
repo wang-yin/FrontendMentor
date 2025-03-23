@@ -38,6 +38,8 @@ body {
   font-family: var(--ff);
   background: var(--BG-light);
   padding: 1.5rem 0;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  height: 100vh;
 }
 
 #root {
@@ -47,6 +49,7 @@ body {
 /* mode */
 .dark-mode {
   background: var(--BG-dark);
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 

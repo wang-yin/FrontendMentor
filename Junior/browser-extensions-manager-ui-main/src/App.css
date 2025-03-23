@@ -1,11 +1,12 @@
 .header {
-  background: var(--Neutral-0);
+  background-color: var(--Neutral-0);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: .5rem;
   border-radius: 15px;
   border: 1px solid var(--Neutral-200);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .content {
@@ -58,8 +59,9 @@
 
 /* dark mode */
 .dark {
-  background: var(--Neutral-800);
+  background-color: var(--Neutral-800);
   border: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .dark-mode-title {

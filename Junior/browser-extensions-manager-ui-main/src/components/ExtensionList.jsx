@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles/ExtensionList.css";
 import ToggleSwitch from "./ToggleSwitch";
 
-function ExtensionList({ theme }) {
+function ExtensionList({ theme, selected }) {
   const [extensionData, setExtensionData] = useState([])
 
   const fetchData  = async () => {
@@ -20,12 +20,32 @@ function ExtensionList({ theme }) {
     fetchData();
   }, []);
 
-  console.log(extensionData)
+
+  const toggleSwitch = (name) => {
+    setExtensionData((prevData) => 
+      prevData.map((item) => 
+        item.name === name ? { ...item, isActive: !item.isActive } : item
+      )
+    )
+  }
+
+
+  const removeExtension = (name) => {
+    setExtensionData((prevData) => prevData.filter((item) => item.name !== name));
+  };
+
+  const filteredData = extensionData.filter((item) => {
+    if (selected === "All") return true;
+    if (selected === "Active") return item.isActive;
+    if (selected === "Inactive") return !item.isActive;
+    return true;
+  });
+
 
   return (
     <>
-      {extensionData.map((item) => (
-        <div className={`extension-item ${theme}-mode-extension-item`}>
+      {filteredData.map((item) => (
+        <div key={item.name} className={`extension-item ${theme}-mode-extension-item`}>
         <div className="extension-info">
           <img className="extension-icon" src={item.logo}></img>
           <div className="extension-details">
@@ -36,8 +56,8 @@ function ExtensionList({ theme }) {
           </div>
         </div>
         <div className="extension-actions">
-          <button className={`remove-button ${theme}-mode-remove-button`}>Remove</button>
-          <ToggleSwitch theme={theme}/>
+          <button className={`remove-button ${theme}-mode-remove-button`} onClick={() => removeExtension(item.name)}>Remove</button>
+          <ToggleSwitch theme={theme} isActive={item.isActive} onToggle={() => toggleSwitch(item.name)}/>
         </div>
       </div>
       ))}
