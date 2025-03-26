@@ -1,5 +1,6 @@
 form {
   width: 100%;
+  max-width: 600px;
   display: flex;
   padding: 1.85rem 1.5rem;
 }
@@ -12,6 +13,7 @@ form input {
   flex: 1;
   font-family: var(--ff);
   letter-spacing: 0.25px;
+  cursor: pointer;
 }
 
 button {
@@ -20,4 +22,13 @@ button {
   border-radius: 0 15px 15px 0;
   cursor: pointer;
   border: none;
+}
+
+
+
+/* RWD */
+@media (min-width: 1024px) {
+  form {
+    padding: 1.7rem 1.45rem;
+  }
 }

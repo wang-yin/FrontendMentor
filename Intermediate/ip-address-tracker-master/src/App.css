@@ -24,9 +24,18 @@ h1 {
   top: 0;
   left: 0;
   z-index: -99;
-  width: 100vw;
+  width: 100%;
 }
 
 .img-container img {
+  width: 100%;
   display: block;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: .35px;
+    margin-top: 1.8rem;
+  }
 }

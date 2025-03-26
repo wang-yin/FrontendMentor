@@ -13,11 +13,11 @@ function Info() {
       </div>
       <div className="info">
         <h4>Timezone</h4>
-        <p>123</p>
+        <p>UTC -05:00</p>
       </div>
       <div className="info">
         <h4>ISP</h4>
-        <p>123</p>
+        <p>SpaceX Starlink</p>
       </div>
     </div>
   )
