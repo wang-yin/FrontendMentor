@@ -1,0 +1,23 @@
+form {
+  width: 100%;
+  display: flex;
+  padding: 1.85rem 1.5rem;
+}
+
+form input {
+  padding: 1.15rem 1.5rem;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  font-size: 1.11rem;
+  flex: 1;
+  font-family: var(--ff);
+  letter-spacing: 0.25px;
+}
+
+button {
+  padding: 1.2rem 1.45rem;
+  background: black;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+  border: none;
+}

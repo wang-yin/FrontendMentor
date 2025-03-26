@@ -1,0 +1,26 @@
+.info-box {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 87%;
+  gap: 1.5rem;
+  margin-top: -0.3rem;
+}
+
+.info h4 {
+  font-size: 0.75rem;
+  color: var(--Dark-Gray);
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  margin-bottom: .45rem;
+  font-weight: var(--fw-700);
+}
+
+.info p {
+  font-size: 1.15rem;
+  font-weight: var(--fw-700);
+  letter-spacing: .2px;
+}
