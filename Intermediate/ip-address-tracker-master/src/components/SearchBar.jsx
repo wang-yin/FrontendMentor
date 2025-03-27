@@ -1,14 +1,26 @@
-import "../styles/SearchBar.css"
+import "../styles/SearchBar.css";
+import { useRef } from "react";
 
-function SearchBar() {
-  return(
-    <form>
-      <input type="text" placeholder="Search for any IP address or domain"></input>
+function SearchBar({ setAddress }) {
+  const inputRef = useRef("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setAddress(inputRef.current.value);
+  };
+
+  return (
+    <form onSubmit={onSubmit}>
+      <input
+        type="text"
+        placeholder="Search for any IP address or domain"
+        ref={inputRef}
+      ></input>
       <button type="submit">
-        <img src="/images/icon-arrow.svg" alt=""></img>
+        <img src="/images/icon-arrow.svg" alt="submit"></img>
       </button>
     </form>
-  )
+  );
 }
 
-export default SearchBar
+export default SearchBar;

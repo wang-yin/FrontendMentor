@@ -1,16 +1,23 @@
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import L from 'leaflet';
 import "leaflet/dist/leaflet.css"
 import "../styles/Map.css"
+import Icon from "/images/icon-location.svg"
 
-function Map() {
-  const position = [51.505, -0.09];
+const customIcon = L.icon({
+  iconUrl: Icon,
+  iconSize: [46, 56],
+});
+
+function Map({ info }) {
+  const position = [info.location.lat, info.location.lng];
   return(
-    <MapContainer center={position} zoom={13} scrollWheelZoom={false} id="map">
+    <MapContainer key={`${position[0]}-${position[1]}`} center={position} zoom={15} zoomControl={false} scrollWheelZoom={false} touchZoom={false} id="map">
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={position}>
+    <Marker position={position} icon={customIcon}>
       
     </Marker>
   </MapContainer>

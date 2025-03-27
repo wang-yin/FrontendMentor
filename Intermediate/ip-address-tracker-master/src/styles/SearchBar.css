@@ -16,6 +16,10 @@ form input {
   cursor: pointer;
 }
 
+input:focus {
+  outline: none;
+}
+
 button {
   padding: 1.2rem 1.45rem;
   background: black;
@@ -24,6 +28,10 @@ button {
   border: none;
 }
 
+
+button:hover {
+  background: var(--Very-Dark-Gray);
+}
 
 
 /* RWD */
