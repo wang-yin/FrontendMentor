@@ -1,1 +1,23 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@theme {
+  --color-Orange: hsl(26, 100%, 55%);
+  --color-Pale-orange: hsl(25, 100%, 94%);
+  --color-Very-dark-blue: hsl(220, 13%, 13%);
+  --color-Dark-grayish-blue: hsl(219, 9%, 45%);
+  --color-Grayish-blue: hsl(220, 14%, 75%);
+  --color-Light-grayish-blue: hsl(223, 64%, 98%);
+  --color-White: hsl(0, 0%, 100%);
+  --color-Black: hsl(0, 0%, 0%);
+  /*with 75% opacity for lightbox background*/
+
+  --ff: "Kumbh Sans", sans-serif;
+
+  --font-weight-fw-400: 400;
+  --font-weight-fw-700: 700;
+}
+
+
+body {
+  font-family: var(--ff);
+}
