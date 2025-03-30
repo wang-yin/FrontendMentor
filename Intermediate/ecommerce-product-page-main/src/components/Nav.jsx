@@ -3,14 +3,19 @@ import cart from "/images/icon-cart.svg";
 import avatar from "/images/image-avatar.png";
 import logo from "/images/logo.svg";
 import Menu from "./menu";
+import Basket from "./Basket";
+import { useState } from "react";
 
 function Nav() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isOpenBasket, setIsOpenBasket] = useState(false)
+
   return (
     <>
-      <div className="fixed inset-0 bg-Black opacity-75 z-40 hidden"></div>
-      <Menu />
+      {isOpen && <div className="fixed inset-0 bg-Black opacity-75 z-40" onClick={() => setIsOpen(false)}></div>}
+      <Menu isOpen={isOpen} setIsOpen={setIsOpen}/>
       <div className="flex items-center gap-4 xl:gap-14">
-        <button className="xl:hidden">
+        <button className="xl:hidden" onClick={() => setIsOpen(true)}>
           <img src={menu} alt="menu"></img>
         </button>
         <img src={logo} alt="logo"></img>
@@ -33,9 +38,10 @@ function Nav() {
         </div>
       </div>
       <div className="flex items-center gap-5.5 xl:gap-12">
-        <img src={cart} alt="cart" className="object-cover-fill cursor-pointer"></img>
-        <div className="w-6 xl:w-[3.1rem] cursor-pointer">
-          <img src={avatar} alt="avatar"></img>
+        <img src={cart} alt="cart" className="object-cover-fill cursor-pointer" onClick={() => setIsOpenBasket(!isOpenBasket)}></img>
+        <Basket isOpenBasket={isOpenBasket} setIsOpenBasket={setIsOpenBasket}/>
+        <div className="w-6 xl:w-[3.1rem] cursor-pointer ">
+          <img src={avatar} alt="avatar" className="hover:border-Orange hover:border-3 rounded-3xl"></img>
         </div>
       </div>
     </>
