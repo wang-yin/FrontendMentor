@@ -1,10 +1,17 @@
 import cart from "/images/icon-cart.svg"
 import plus from "/images/icon-plus.svg"
 import minus from "/images/icon-minus.svg"
-import { useState } from "react"
+import { useState, useContext } from "react"
+import CartContext from "./store/cart-context";
 
 function AddToCart() {
   const [count, setCount] = useState(0)
+  const cartCtx = useContext(CartContext);
+
+  const addToCartHandler = () => {
+    cartCtx.addItem(count);
+    setCount(0); 
+  };
 
   return(
     <>
@@ -22,7 +29,7 @@ function AddToCart() {
         </button>
       </div>
       <div className="flex justify-center bg-Orange p-4 rounded-xl shadow-Orange/30 shadow-xl transition-opacity duration-300 hover:opacity-70 xl:px-[4.8rem] xl:shadow-none cursor-pointer">
-        <button className="flex gap-4 font-fw-700 items-center cursor-pointer">
+        <button className="flex gap-4 font-fw-700 items-center cursor-pointer" onClick={addToCartHandler}>
         <img src={cart} alt="add-to-cart" className="w-4 h-4 cursor-pointer"></img>
         Add to cart
       </button>

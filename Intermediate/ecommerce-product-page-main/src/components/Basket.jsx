@@ -1,30 +1,17 @@
 import { createPortal } from "react-dom";
-import product1 from "/images/image-product-1-thumbnail.jpg";
-import deleteicon from "/images/icon-delete.svg";
+import CartContext from "./store/cart-context";
+import { useContext } from "react";
+import BasketInfoEmpty from "./BasketInfoEmpty";
+import BasketInfoFilled from "./BasketInfoFilled";
 
 function Basket({ isOpenBasket, setIsOpenBasket }) {
   if (!isOpenBasket) return null;
+  const cartCtx = useContext(CartContext);
 
   return createPortal(
-    <div className="absolute top-24 right-22 w-90 bg-White border-1 border-White pt-[.95rem] pb-[2rem] pr-[.1rem] shadow-2xl rounded-lg">
-      <h1 className="pl-[1.35rem] font-fw-700 mb-[1.58rem]">Cart</h1>
-      <div className="border-t border-Grayish-blue">
-        <div className="flex justify-center items-center py-[1.5rem] gap-[1.28rem]">
-          <div className="w-[3.1rem] rounded-sm overflow-hidden">
-            <img src={product1} alt="product"></img>
-          </div>
-          <div className="flex flex-col ml-[-.3rem] leading-[1.55rem]">
-            <p className="text-Dark-grayish-blue">Fall Limited Edition Sneakers </p>
-            <p className="tracking-[.025rem] text-Dark-grayish-blue">$125.00 x 3 <span className="font-fw-700 ml-[0.2rem] tracking-[.04rem] text-Black">$375.00</span></p>
-          </div>
-          <div>
-            <img src={deleteicon} alt="delete"></img>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center mt-0.5">
-        <button className="bg-Orange px-[7.45rem] py-[1rem] font-fw-700 rounded-[.6rem]">Checkout</button>
-      </div>
+    <div className="absolute top-19 right-[0.45rem] xl:top-24 xl:right-22 w-[22.5rem] bg-White border-1 border-White pt-[.95rem] pb-[2rem] pr-[.1rem] shadow-2xl rounded-lg z-99">
+      <h1 className="pl-[1.4rem] pt-[0.1rem] xl:pt-0 mb-[1.58rem] xl:pl-[1.35rem] font-fw-700 xl:mb-[1.58rem]">Cart</h1>
+      {cartCtx.count === 0 ? <BasketInfoEmpty /> : <BasketInfoFilled />}
     </div>,
 
     document.body

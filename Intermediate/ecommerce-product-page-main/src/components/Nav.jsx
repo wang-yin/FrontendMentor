@@ -4,11 +4,13 @@ import avatar from "/images/image-avatar.png";
 import logo from "/images/logo.svg";
 import Menu from "./menu";
 import Basket from "./Basket";
-import { useState } from "react";
+import CartContext from "./store/cart-context";
+import { useState, useContext } from "react";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false)
   const [isOpenBasket, setIsOpenBasket] = useState(false)
+  const cartCtx = useContext(CartContext);
 
   return (
     <>
@@ -38,6 +40,7 @@ function Nav() {
         </div>
       </div>
       <div className="flex items-center gap-5.5 xl:gap-12">
+        {cartCtx.count !== 0 ? <div className='absolute top-3.5 right-[4.05rem] xl:top-9 xl:right-[15.95rem] bg-Orange px-[0.4rem] rounded-[0.45rem] text-[.65rem] text-White'>{cartCtx.count}</div> : "" }
         <img src={cart} alt="cart" className="object-cover-fill cursor-pointer" onClick={() => setIsOpenBasket(!isOpenBasket)}></img>
         <Basket isOpenBasket={isOpenBasket} setIsOpenBasket={setIsOpenBasket}/>
         <div className="w-6 xl:w-[3.1rem] cursor-pointer ">
