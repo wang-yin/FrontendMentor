@@ -10,9 +10,11 @@ import product4 from "/images/image-product-4.jpg";
 import Nav from "./Nav";
 import Image from "./Image";
 import Info from "./Info";
+import Lightbox from "./Lightbox";
 
 function Layout() {
   const [selectedImage, setSelectedImage] = useState(product1);
+  const [openLightbox, setOpenLightbox] = useState(false)
 
   const thumbnails = [
     { id: 1, img: thumbnail1, full: product1 },
@@ -22,45 +24,54 @@ function Layout() {
   ];
 
   return (
-    <main className="xl:flex xl:flex-col xl:mt-[.7rem]">
-      <nav className="flex justify-between items-center px-6 pt-4.5 pb-6.5 bg-White md:border-b-1 md:border-Grayish-blue xl:pb-[2.1rem] xl:px-[1.5rem]">
-        <Nav />
-      </nav>
-      <div className="md:flex md:gap-10 md:pt-[1.5rem] xl:px-[1.5rem] xl:pt-0">
-        <div className="md:flex md:pt-[9rem] md:px-[1rem] xl:pt-[5.65rem] xl:px-[3rem] xl:gap-[7.8rem] ">
-          <div className="md:mr-10 xl:mr-0">
-            <div
-              className="flex flex-col justify-center w-full h-[18.9rem]  bg-center bg-cover md:rounded-2xl xl:w-[27.8rem] xl:h-[27.8rem]"
-              style={{ backgroundImage: `url(${selectedImage})` }}
-            >
-              <Image />
+    <>
+    {openLightbox && <div className="fixed inset-0 bg-Black opacity-75 z-40" onClick={() => setOpenLightbox(false)}></div>}
+    <Lightbox openLightbox={openLightbox} setOpenLightbox={setOpenLightbox}/>
+      <main className="xl:flex xl:flex-col xl:mt-[.7rem]">
+        <nav className="flex justify-between items-center px-6 pt-4.5 pb-6.5 bg-White md:border-b-1 md:border-Grayish-blue xl:pb-[2.1rem] xl:px-[1.5rem]">
+          <Nav />
+        </nav>
+        <div className="md:flex md:gap-10 md:pt-[1.5rem] xl:px-[1.5rem] xl:pt-0">
+          <div className="md:flex md:pt-[9rem] md:px-[1rem] xl:pt-[5.65rem] xl:px-[3rem] xl:gap-[7.8rem] ">
+            <div className="md:mr-10 xl:mr-0">
+              <div
+                className="flex flex-col justify-center w-full h-[18.9rem]  bg-center bg-cover md:rounded-2xl xl:w-[27.8rem] xl:h-[27.8rem]"
+                style={{ backgroundImage: `url(${selectedImage})` }}
+                onClick={() => {
+                  if (window.innerWidth >= 1440) {
+                    setOpenLightbox(true)
+                  }
+                }}
+              >
+                <Image />
+              </div>
+              <div className="hidden md:flex md:mt-10 xl:mt-8 xl:gap-[1.875rem]">
+                {thumbnails.map((thumb) => (
+                  <div
+                    key={thumb.id}
+                    className={`xl:rounded-lg xl:overflow-hidden cursor-pointer border-2 ${
+                      selectedImage === thumb.full
+                        ? "border-Orange"
+                        : "border-transparent"
+                    }`}
+                    onClick={() => setSelectedImage(thumb.full)}
+                  >
+                    <img
+                      src={thumb.img}
+                      alt={`Thumbnail ${thumb.id}`}
+                      className="transition-opacity duration-300 hover:opacity-50"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="hidden md:flex md:mt-10 xl:mt-8 xl:gap-[1.875rem]">
-              {thumbnails.map((thumb) => (
-                <div
-                  key={thumb.id}
-                  className={`xl:rounded-lg xl:overflow-hidden cursor-pointer border-2 ${
-                    selectedImage === thumb.full
-                      ? "border-Orange"
-                      : "border-transparent"
-                  }`}
-                  onClick={() => setSelectedImage(thumb.full)}
-                >
-                  <img
-                    src={thumb.img}
-                    alt={`Thumbnail ${thumb.id}`}
-                    className="transition-opacity duration-300 hover:opacity-50"
-                  />
-                </div>
-              ))}
+            <div className="px-6 pt-5.5 xl:px-0 xl:pt-[3.9rem]">
+              <Info />
             </div>
-          </div>
-          <div className="px-6 pt-5.5 xl:px-0 xl:pt-[3.9rem]">
-            <Info />
           </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 

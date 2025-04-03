@@ -23,7 +23,7 @@ function BasketInfoFilled() {
         </div>
       </div>
       <div className="flex justify-center mt-0.5">
-        <button className="bg-Orange px-[7.45rem] py-[1rem] font-fw-700 rounded-[.6rem]">Checkout</button>
+        <button className="bg-Orange px-[7.45rem] py-[1rem] font-fw-700 rounded-[.6rem] hover:cursor-pointer">Checkout</button>
       </div>
     </>
   )
